@@ -18,6 +18,7 @@ public class ProjectConfig {
         p.setName("kimi");
         return p;
     }
+    @Bean
     Parrot blueParrot(){
         Parrot p = new Parrot();
         p.setName("blue");

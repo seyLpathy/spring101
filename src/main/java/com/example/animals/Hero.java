@@ -2,6 +2,7 @@ package com.example.animals;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,7 +11,7 @@ public class Hero {
     private final Parrot parrot;
     //dependecies injected by context
     @Autowired
-    Hero(Parrot parrot) {
+    Hero(@Qualifier("blueParrot") Parrot parrot) {
         this.parrot = parrot;
     }
     public Parrot getParrot(){
