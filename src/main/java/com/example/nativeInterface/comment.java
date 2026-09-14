@@ -1,5 +1,8 @@
 package com.example.nativeInterface;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class comment {
     private String author;
     private String text;

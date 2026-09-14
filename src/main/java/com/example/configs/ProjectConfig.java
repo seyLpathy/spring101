@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan(basePackages = "com.example.animals")
+@ComponentScan(basePackages = "com.example")
 public class ProjectConfig {
     @Bean
     @Primary
