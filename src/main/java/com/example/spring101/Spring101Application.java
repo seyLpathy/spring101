@@ -38,7 +38,10 @@ public class Spring101Application {
         service.publishComment(c);
         // prove that a bean is instanced when app creates the spring context
         // use lazy annotation to instruct the spring to create instance lazily
+        // using prototype annotation
         fish shark = context.getBean(fish.class);
+        fish shark2 = context.getBean(fish.class);
+        System.out.println(shark==shark2);
     }
 
 }
