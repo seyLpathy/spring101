@@ -1,16 +1,18 @@
 package com.example.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.xml.stream.events.Comment;
 
 @Component
 public class CommentService {
-    CommentService(){
-        System.out.println("Comment Service is working");
-    }
+    private final Logger logger = LoggerFactory.getLogger(CommentService.class);
     public void publishComment() {
-        System.out.println("demo comment published");
-
+        logger.info("Publishing comment");
+    }
+    public void deleteComment(){
+        logger.info("Deleting comment");
     }
 }
