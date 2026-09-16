@@ -1,15 +1,18 @@
 package com.example.configs;
 
+import com.example.AOP.LoggingAspect;
 import com.example.animals.Parrot;
 import org.springframework.boot.context.properties.bind.DefaultValue;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 
 @Configuration
-@ComponentScan(basePackages = "com.example.animals")
+@ComponentScan(basePackages = "com.example")
+@EnableAspectJAutoProxy
 public class ProjectConfig {
+    @Bean
+    LoggingAspect aspect(){
+        return new LoggingAspect();
+    }
     @Bean
     @Primary
     //make this bean method the default
@@ -37,16 +40,6 @@ public class ProjectConfig {
         Parrot p = new Parrot();
         p.setName("jomi");
         return p;
-    }
-
-    @Bean
-    String hello(){
-        return "hello";
-    }
-
-    @Bean
-    int id(){
-        return 1;
     }
 
 }
