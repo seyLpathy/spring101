@@ -17,8 +17,6 @@ public class Spring101Application {
     {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
         CommentService commentService = context.getBean(CommentService.class);
-        //this won't be intercepted
-        commentService.publishComment();
         //this will be intercepted
         commentService.deleteComment();
 

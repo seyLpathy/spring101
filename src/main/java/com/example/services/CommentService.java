@@ -12,6 +12,7 @@ public class CommentService {
     public void publishComment() {
         logger.info("Publishing comment");
     }
+
     public void deleteComment(){
         logger.info("Deleting comment");
     }
