@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome for login in!</title>
+</head>
+<body>
+<h1>Welcome,<span th:text="${username}"></span></h1>
+<h2>
+    your login number is
+    <span th:text="${logincount}"></span>
+</h2>
+<a href="/main?logout">Log out</a>
+
+</body>
+</html>
